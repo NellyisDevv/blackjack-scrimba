@@ -9,28 +9,38 @@ let isAlive = true;
 /* 3. Declare a variable called message and assign its value
 to an empty string */
 let message = '';
-// 4. Reassign the message variable to the string we're logging out
-
-if (sum < 21) {
-  message = 'Do you wnat to draw a new card? 🙂';
-} else if (sum === 21) {
-  message = "Wohoo! You've got Blackjack! 🥳";
-  hasBlackJack = true;
-} else if (sum > 21) {
-  // sum > 21 is not needed, < 21 and = 21 are the only alternatives
-  message = "You're out of the game! 😭";
-  // 2. Flip its value to false in the appropriate code block
-  isAlive = false;
-}
-
-// 5. Log out "Message" variable
-console.log(message);
 
 // CASH OUT!
 // console.log(hasBlackJack);
 
+// GRAB MESSAGE-EL ID FROM PARAGRAPH "PLAY A ROUND"
+let messageEl = document.getElementById('message-el');
+
+// GRAB STARTGAME ID FROM BUTTON "START GAME"
 let startGame = document.getElementById('startgame');
 
+// GRAB SUM-EL ID FROM PARAGRAPH "SUM"
+// sumEl = document.getElementById('sum-el');
+// Query selector is similar to getElementById
+// You need to insert # when grabbing id with querySelector
+// It tells querySelector its the actual "id" and not anything else
+// querySelector is more broad instead of asking for the actual getElementById
+// "Selector" stands for CSS selectors "id" is # and class is "."
+// You can choose any CSS element to insert into querySelector
+let sumEl = document.querySelector('#sum-el');
+
 startGame.onclick = () => {
-  alert('This is working now!');
+  // 3. Render the sum on the page using -> "Sum: 14"
+  sumEl.textContent = 'Sum: ' + sum;
+  if (sum < 21) {
+    message = 'Draw a new card? 🙂';
+  } else if (sum === 21) {
+    message = "You've got Blackjack! 🥳";
+    hasBlackJack = true;
+  } else {
+    message = "You're out of the game! 😭";
+    isAlive = false;
+  }
+  // Display the message in the messageEl using textContent
+  messageEl.textContent = message;
 };

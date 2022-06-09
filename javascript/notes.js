@@ -101,9 +101,9 @@ console.log(3 >= 3); // TRUE 3 IS NOT GREATER THAN BUT EQUAL TO 3
 console.log(11 <= 11); // TRUE 11 IS SAME AS 11
 console.log(3 <= 2); // FALSE 2 IS NOT EQUAL TO OR GREATER THAN 3
 
-let firstCard = 10;
-let secondCard = 12;
-let sum = firstCard + secondCard;
+let firstCardd = 10;
+let secondCardd = 12;
+let summ = firstCard + secondCard;
 // STORE THE CONSOLE.LOG() VALUE
 let hasBlackJack = false;
 // STORE CONSOLE.LOG() VALUE
@@ -133,3 +133,20 @@ console.log(message);
 
 // CASH OUT!
 console.log(hasBlackJack);
+
+/*
+if (sum < 21) {
+  message = 'Do you wnat to draw a new card? 🙂';
+} else if (sum === 21) {
+  message = "Wohoo! You've got Blackjack! 🥳";
+  hasBlackJack = true;
+} else if (sum > 21) {
+  // sum > 21 is not needed, < 21 and = 21 are the only alternatives
+  message = "You're out of the game! 😭";
+  // 2. Flip its value to false in the appropriate code block
+  isAlive = false;
+}
+
+// 5. Log out "Message" variable
+console.log(message);
+*/
