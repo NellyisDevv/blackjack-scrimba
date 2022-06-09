@@ -42,9 +42,26 @@ body {
 }
 .section-one .card-container h1 {
   font-size: 4.2rem;
+  padding-bottom: 15px;
 }
 .section-one .card-container p {
   font-size: 1.8rem;
+  padding-bottom: 5px;
+}
+.section-one .card-container button {
+  color: white;
+  background-color: goldenrod;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  max-width: 200px;
+  padding: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.section-one .card-container button:hover {
+  background-color: white;
+  color: goldenrod;
 }
 
 footer {

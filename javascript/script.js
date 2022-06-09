@@ -28,3 +28,9 @@ console.log(message);
 
 // CASH OUT!
 // console.log(hasBlackJack);
+
+let startGame = document.getElementById('startgame');
+
+startGame.onclick = () => {
+  alert('This is working now!');
+};
