@@ -150,3 +150,33 @@ if (sum < 21) {
 // 5. Log out "Message" variable
 console.log(message);
 */
+
+// ON CLICK FUNCTIONS DO NOT WORK FOR THIS PROJECT!!!!!
+startGame.onclick = () => {
+  // 3. Render the sum on the page using -> "Sum: 14"
+  // Render the cards on the page using -> "Cards: 10 + 4"
+  cardsEl.textContent = 'Cards: ' + firstCard + ' / ' + secondCard;
+  sumEl.textContent = 'Sum: ' + sum;
+  if (sum < 21) {
+    message = 'Draw a new card? 🙂';
+  } else if (sum === 21) {
+    message = "You've got Blackjack! 🥳";
+    hasBlackJack = true;
+  } else {
+    message = "You're out of the game! 😭";
+    isAlive = false;
+  }
+  // Display the message in the messageEl using textContent
+  messageEl.textContent = message;
+};
+
+newCard.onclick = () => {
+  // 1. Create a card variable, and hard code its value to a number (2-11)
+  let thirdCard = 2;
+
+  // 2. Add th new card to the sum variable
+  sum += thirdCard;
+
+  // 3. Call startGame()
+  startGame();
+};

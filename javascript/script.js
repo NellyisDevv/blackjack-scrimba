@@ -29,8 +29,16 @@ let startGame = document.getElementById('startgame');
 // You can choose any CSS element to insert into querySelector
 let sumEl = document.querySelector('#sum-el');
 
-startGame.onclick = () => {
+// GRAB THE CARDS-EL ID FROM PARAGRAPH "CARDS:"
+let cardsEl = document.querySelector('#cards-el');
+
+// GRAB THE NEWCARD-EL FROM BUTTON "NEW CARD"
+let newCard = document.querySelector('#newcard-el');
+
+function startgame() {
   // 3. Render the sum on the page using -> "Sum: 14"
+  // Render the cards on the page using -> "Cards: 10 + 4"
+  cardsEl.textContent = 'Cards: ' + firstCard + ' / ' + secondCard;
   sumEl.textContent = 'Sum: ' + sum;
   if (sum < 21) {
     message = 'Draw a new card? 🙂';
@@ -43,4 +51,15 @@ startGame.onclick = () => {
   }
   // Display the message in the messageEl using textContent
   messageEl.textContent = message;
-};
+}
+
+function newcard() {
+  // 1. Create a card variable, and hard code its value to a number (2-11)
+  let thirdCard = 2;
+
+  // 2. Add th new card to the sum variable
+  sum += thirdCard;
+
+  // 3. Call startGame()
+  startgame();
+}

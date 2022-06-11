@@ -13,9 +13,11 @@
       <div class="card-container">
         <h1>Blackjack</h1>
         <p id="message-el">Want to play a round?</p>
-        <p>Cards:</p>
+        <!--Give the cards paragraph an id of cards-el-->
+        <p id="cards-el">Cards:</p>
         <p id="sum-el">Sum:</p>
-        <button id="startgame">Start Game</button>
+        <button onclick="startgame()" id="startgame">Start Game</button>
+        <button onclick="newcard()" id="newcard-el">New Card</button>
       </div>
     </section>
     <footer>
