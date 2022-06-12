@@ -151,6 +151,7 @@ if (sum < 21) {
 console.log(message);
 */
 
+/*
 // ON CLICK FUNCTIONS DO NOT WORK FOR THIS PROJECT!!!!!
 startGame.onclick = () => {
   // 3. Render the sum on the page using -> "Sum: 14"
@@ -180,3 +181,35 @@ newCard.onclick = () => {
   // 3. Call startGame()
   startGame();
 };
+*/
+
+// ARRAYS - ORDERED LIST OF ITEMS
+// 0 indexed meaning the first array is always "0" not "1"
+let featuredPosts = [
+  'Check out my Netflix clone',
+  "Here's the code for my project",
+  "I've just relaunched my portolio",
+];
+
+// This console log output is "check out my Netflix clone"
+console.log(featuredPosts[0]);
+
+let accomplishments = [
+  "I've created multiple CMS websites",
+  'I know multiple back-end languages',
+  'I have many full-stack applications',
+];
+
+console.log(accomplishments[0], accomplishments[1], accomplishments[2]);
+
+let experience = [
+  'CEO at Scrimba',
+  'Frontend developer at Xeneta',
+  'People counter for Norstat',
+];
+
+// Make the following appear in the console:
+console.log(experience[2], experience[1], experience[0]);
+// Frontend developer at Xeneta
+// People counter for Norstat
+// CEO at Scrimba

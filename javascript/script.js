@@ -1,5 +1,8 @@
 let firstCard = 10;
 let secondCard = 11;
+// THIS IS AN ARRAY - ORDERED LIST OF ITEMS
+// AN ARRAY COUNT STARTS FROM 0 WHICH IS THE FIRST ITEM IN THE ARRAY
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 // STORE THE CONSOLE.LOG() VALUE
 let hasBlackJack = false;
@@ -35,10 +38,18 @@ let cardsEl = document.querySelector('#cards-el');
 // GRAB THE NEWCARD-EL FROM BUTTON "NEW CARD"
 let newCard = document.querySelector('#newcard-el');
 
+// CREATE A NEW FUNCTION CALLED STARTGAME() THAT CALLS RENDERGAME()
 function startgame() {
+  // call rendergame()
+  rendergame();
+}
+
+// CHANGE STARTGAME() BECAUSE IT DOESN'T START THE GAME
+function rendergame() {
   // 3. Render the sum on the page using -> "Sum: 14"
   // Render the cards on the page using -> "Cards: 10 + 4"
-  cardsEl.textContent = 'Cards: ' + firstCard + ' / ' + secondCard;
+  // INSERT THE CARDS ARRAY
+  cardsEl.textContent = 'Cards: ' + cards[0] + ' / ' + cards[1];
   sumEl.textContent = 'Sum: ' + sum;
   if (sum < 21) {
     message = 'Draw a new card? 🙂';
@@ -61,5 +72,14 @@ function newcard() {
   sum += thirdCard;
 
   // 3. Call startGame()
-  startgame();
+  rendergame();
 }
+
+let end = ['End the game in three', 'two', 'one'];
+console.log(end[0]);
+console.log(end[1]);
+console.log(end[2]);
+// This equals "3" because array is 0 index but legnth is not
+// The length property of an array is always one larger!
+// The length of an array is counted from number 1
+console.log(end.length);
