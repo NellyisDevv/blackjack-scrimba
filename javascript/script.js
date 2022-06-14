@@ -21,6 +21,8 @@ let messageEl = document.getElementById('message-el');
 
 // GRAB STARTGAME ID FROM BUTTON "START GAME"
 let startGame = document.getElementById('startgame');
+// THIS IS MESSING UP MY FUNCTIONS BECAUSE "startGame"
+// IS ALREADY BEING USED IN JAVASCRIPT!!!
 
 // GRAB SUM-EL ID FROM PARAGRAPH "SUM"
 // sumEl = document.getElementById('sum-el');
@@ -39,6 +41,8 @@ let cardsEl = document.querySelector('#cards-el');
 let newCard = document.querySelector('#newcard-el');
 
 // CREATE A NEW FUNCTION CALLED STARTGAME() THAT CALLS RENDERGAME()
+// WE CREATED THIS NEW FUNCTION BECAUSE STARTGAME() SHOULD
+// ALWAYS BE AT THE BEGINNING FOR READABILITY!
 function startgame() {
   // call rendergame()
   rendergame();
@@ -67,15 +71,18 @@ function rendergame() {
 function newcard() {
   // 1. Create a card variable, and hard code its value to a number (2-11)
   let thirdCard = 2;
-
   // 2. Add th new card to the sum variable
   sum += thirdCard;
-
+  // Push the thirdCard to the cards array
+  cards.push(thirdCard);
+  // console log shows the thirdCard is now added to the array!
+  console.log(cards);
   // 3. Call startGame()
   rendergame();
 }
 
 let end = ['End the game in three', 'two', 'one'];
+// WE INSTEAD CALLED THE ARRAY ONE BY ONE THROUGH CONSOLE.LOG
 console.log(end[0]);
 console.log(end[1]);
 console.log(end[2]);
