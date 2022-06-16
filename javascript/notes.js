@@ -260,3 +260,61 @@ console.log(messages);
 messages.pop(newMessage);
 // ARRAY WITH THE NEW MESSAGE TAKEN AWAY!
 console.log(messages);
+
+// Count to ten!
+// We need to specify...
+// Where should we START counting?
+// Where is the FINISH line?
+// What's the STEP SIZE we should use?
+//   START          FINISH      STEP SIZE
+// Count starts at 1, count is less than 11, count adds by 1
+// Changing count to count += 2 makes the count 1 3 5 7 9 not 11 because count is less than 11
+for (let count = 1; count < 21; count += 1) {
+  console.log(count);
+}
+// Modified for loop to count from 10 to 20
+for (let count = 10; count < 21; count += 1) {}
+// Modified for loop to count from 1 to 20
+for (let count = 1; count < 21; count += 1) {}
+// i is a more commonly used keyword in javascript replacing count!
+// Creating a count to 5
+for (let i = 0; i < 6; i += 1) {
+  console.log();
+}
+// Create a for loop that counts from 10 to 100 in steps of 10
+// Use console.log to log out the numbers
+for (i = 10; i < 101; i += 10) {
+  console.log(i);
+}
+// Issues with manual arrays
+let manual = [
+  'This is a manual array!',
+  'This array has one major problem!',
+  'When you add something new',
+  'it will not update itself!',
+];
+// DRY - Don't repeat yourself
+console.log(manual[0]);
+console.log(manual[1]);
+console.log(manual[2]);
+// "it will not update itself" will not appear unless you do it
+
+// This for loop resembles the console.log(manual[0])
+// Remember the counting here is different meaning for loop
+// is counting an array from 1 and not 0
+for (let i = 0; i < 4; i += 1) {
+  console.log(manual[i]);
+}
+// There is one more issue
+// since the for loop only counts to 3 if you add more to array
+// it will not log out new infromation
+// to fix this use ".length"
+let newManualArray = [
+  'This manual array will update',
+  'automatically without having to',
+  'manually log out new items added!',
+  'Even this emoji will be loged!',
+];
+for (let i = 0; i < newManualArray.length; i += i) {
+  console.log(newManualArray[i]);
+}

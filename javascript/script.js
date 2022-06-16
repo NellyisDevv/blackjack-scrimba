@@ -53,7 +53,14 @@ function rendergame() {
   // 3. Render the sum on the page using -> "Sum: 14"
   // Render the cards on the page using -> "Cards: 10 + 4"
   // INSERT THE CARDS ARRAY
-  cardsEl.textContent = 'Cards: ' + cards[0] + ' / ' + cards[1];
+  cardsEl.textContent = 'Cards: ';
+  // Create a for loop that renders out all the cards instead of just two
+  // The third card will not be a part of this for loop
+  // until it's pushed into the array further down the code
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + ' ';
+    console.log(cards[i]);
+  }
   sumEl.textContent = 'Sum: ' + sum;
   if (sum < 21) {
     message = 'Draw a new card? 🙂';
