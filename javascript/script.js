@@ -1,5 +1,5 @@
-let firstCard = 10;
-let secondCard = 11;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 // THIS IS AN ARRAY - ORDERED LIST OF ITEMS
 // AN ARRAY COUNT STARTS FROM 0 WHICH IS THE FIRST ITEM IN THE ARRAY
 let cards = [firstCard, secondCard];
@@ -40,6 +40,15 @@ let cardsEl = document.querySelector('#cards-el');
 // GRAB THE NEWCARD-EL FROM BUTTON "NEW CARD"
 let newCard = document.querySelector('#newcard-el');
 
+// 1. Create a function, getRandomCard(), that always returns the number 5
+// 2. Give this function to card one, two and three!
+// Functions can be called anywhere inside of your script
+// This is called a function declaration it doesn't matter where you write the function!
+// Writing this function is like writing it on line 1
+function getRandomCard() {
+  return Math.floor(Math.random() * 13) + 1;
+}
+
 // CREATE A NEW FUNCTION CALLED STARTGAME() THAT CALLS RENDERGAME()
 // WE CREATED THIS NEW FUNCTION BECAUSE STARTGAME() SHOULD
 // ALWAYS BE AT THE BEGINNING FOR READABILITY!
@@ -77,7 +86,7 @@ function rendergame() {
 
 function newcard() {
   // 1. Create a card variable, and hard code its value to a number (2-11)
-  let thirdCard = 2;
+  let thirdCard = getRandomCard();
   // 2. Add th new card to the sum variable
   sum += thirdCard;
   // Push the thirdCard to the cards array
