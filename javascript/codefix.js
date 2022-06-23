@@ -26,15 +26,15 @@ function startGame() {
   // Game started so you are now alive!
   isAlive = true;
   // The first card will grab a randomNumber
-  let firstCard = randomNumber();
+  let firstCard = getRandomCard();
   // The second card will grab a randomNumber
-  let secondCard = randomNumber();
+  let secondCard = getRandomCard();
   // First and second card are placed in an array!
-  cards = [firstCard + secondCard];
+  cards = [firstCard, secondCard];
   // Sum equals the firstCard plus the secondCard
   sum = firstCard + secondCard;
   // You can now execute the game!
-  rendergame();
+  renderGame();
 }
 
 function renderGame() {
@@ -42,16 +42,18 @@ function renderGame() {
   for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent += cards[i] + ' ';
   }
+
   sumEl.textContent = 'Sum: ' + sum;
   if (sum <= 20) {
     message = 'Do you want to draw a new card?';
   } else if (sum === 21) {
     message = "You've got Blackjack!";
+    hasBlackJack = true;
   } else {
     message = 'You are out of the game!';
     isAlive = false;
   }
-  message.textContent = message;
+  messageEl.textContent = message;
 }
 
 function newCard() {
