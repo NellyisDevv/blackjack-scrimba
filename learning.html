@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Learning</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: black;
+      color: bisque;
+      font-size: 3rem;
+      text-align: center;
+      padding: 50px;
+    }
+    .random-box {
+      background: rgb(159, 121, 71);
+      height: 70px;
+      width: 80px;
+      margin: auto;
+      border-radius: 8px;
+    }
+    .generate-box {
+      background: rgb(159, 121, 71);
+      height: 100px;
+      width: 200px;
+      padding: 20px;
+      margin: auto;
+      font-size: 2.4rem;
+      border-radius: 8px;
+      margin-top: 50px;
+      cursor: pointer;
+      border: none;
+      color: bisque;
+    }
+    .bar-box {
+      margin-top: 30px;
+      font-size: 3rem;
+      text-decoration: underline;
+    }
+    .introduce-box {
+      margin-top: 30px;
+    }
+    .right-button {
+      background: rgb(159, 121, 71);
+      height: 100px;
+      width: 200px;
+      padding: 20px;
+      margin: auto;
+      font-size: 2.4rem;
+      border-radius: 8px;
+      margin-top: 50px;
+      cursor: pointer;
+      border: none;
+      color: bisque;
+    }
+    .counter-section {
+      background: rgb(159, 121, 71);
+      height: 500px;
+      width: 300px;
+      margin: auto;
+      margin-top: 30px;
+      border-radius: 8px;
+      border: 4px solid rgb(80, 59, 33);
+    }
+    .counter-section h2 {
+      font-size: 2.5rem;
+      padding: 10px;
+    }
+    .counter-section h3 {
+      font-size: 7rem;
+    }
+    .counter-btn {
+      background: rgb(80, 59, 33);
+      border: none;
+      padding: 8px;
+      border-radius: 8px;
+      color: rgb(159, 121, 71);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    #save-el {
+      font-size: 2rem;
+      background: rgb(80, 59, 33);
+      width: 280px;
+      height: 150px;
+      border-radius: 8px;
+      margin: auto;
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <!---
+    THINGS TO TEST
+    --------------
+    15. Make a mockup Counter game
+    16. Make a mockup Blackjack game
+    17. Review all your notes and make sure you know everything
+    -->
+    <p class="random-box" id="count-el"></p>
+    <button class="generate-box" id="generate-el">Click Me</button>
+    <p class="bar-box" id="bar-el"></p>
+    <p class="introduce-box" id="introduce-el"></p>
+    <button id="right-el" class="right-button" onclick="right()">left</button>
+    <p id="nelly-el" class="introduce-box"></p>
+    <p class="introduce-box" id="push-array"></p>
+    <div class="counter-section">
+      <h2>Counter App</h2>
+      <h3 id="num-el">0</h3>
+      <button class="counter-btn" onclick="increment()">increment</button>
+      <button class="counter-btn" onclick="decrement()">decrement</button>
+      <button class="counter-btn" onclick="save()">save</button>
+      <section id="save-el">Saved Entries: <br /></section>
+    </div>
+    <script src="./javascript/learning.js"></script>
+  </body>
+</html>

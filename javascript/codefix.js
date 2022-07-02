@@ -40,6 +40,7 @@ function startGame() {
 function renderGame() {
   cardsEl.textContent = 'Cards: ';
   for (let i = 0; i < cards.length; i++) {
+    // += is important to keep the 'Cards: ' string
     cardsEl.textContent += cards[i] + ' ';
   }
 
@@ -59,7 +60,10 @@ function renderGame() {
 function newCard() {
   // Card here represents the newCard
   let card = getRandomCard();
+  // sum = sum + card
   sum += card;
+  // Push the card inside of the cards[] array
   cards.push(card);
+  // render the game again!
   renderGame();
 }
