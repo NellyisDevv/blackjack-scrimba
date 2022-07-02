@@ -1,3 +1,9 @@
+// This player object is giving blackjack my name
+// and the ammount of chips that I have!
+let player = {
+  name: 'Nelly',
+  chips: 280,
+};
 let firstCard = getRandomCard();
 let secondCard = getRandomCard();
 // THIS IS AN ARRAY - ORDERED LIST OF ITEMS
@@ -44,6 +50,28 @@ let cardsEl = document.querySelector('#cards-el');
 // GRAB THE NEWCARD-EL FROM BUTTON "NEW CARD"
 // The game does not need this either!
 // let newCard = document.querySelector('#newcard-el');
+// This is an object!
+// Inside of an object we dont use "let"
+// We also replace = with :
+// We also separate items with commas ,
+// We can change playerName and playerChips into just
+// name and chips because player is the name of the object so we know what they go towards
+// let player = {
+//   // an item inside of an object is called a key
+//   // name and chips are both keys!
+//   name: 'Nelly',
+//   chips: 145,
+// };
+
+// Grab ahold of the player-el paragraph and store it in a variable called playerEl
+let playerEl = document.getElementById('player-el');
+
+// Render the player's name and chips in playerEl
+playerEl.textContent = player.name + ': $' + player.chips;
+
+// let playerEl = document.getElementById('player-el');
+// // to call an object use the object number and the key
+// playerEl.textContent = player.name + ': $' + player.chips;
 
 // 1. Create a function, getRandomCard(), that always returns the number 5
 // 2. Give this function to card one, two and three!
@@ -102,16 +130,25 @@ function renderGame() {
 }
 
 function newCard() {
-  // 1. Create a card variable, and hard code its value to a number (2-11)
-  let thirdCard = getRandomCard();
-  // 2. Add th new card to the sum variable
-  sum += thirdCard;
-  // Push the thirdCard to the cards array
-  cards.push(thirdCard);
-  // console log shows the thirdCard is now added to the array!
-  console.log(cards);
-  // 3. Call startGame()
-  renderGame();
+  // Only allow the player to get a new card if she IS alive and does NOT have blackjack
+  // Take the entire logic and put it all inside of the if statement
+  // Now the logic will only run if the conditions of the if statement is met!
+  if (isAlive === true && hasBlackJack === false) {
+    let thirdCard = getRandomCard();
+    sum += thirdCard;
+    cards.push(thirdCard);
+    renderGame();
+  }
+  // // 1. Create a card variable, and hard code its value to a number (2-11)
+  // let thirdCard = getRandomCard();
+  // // 2. Add th new card to the sum variable
+  // sum += thirdCard;
+  // // Push the thirdCard to the cards array
+  // cards.push(thirdCard);
+  // // console log shows the thirdCard is now added to the array!
+  // console.log(cards);
+  // // 3. Call startGame()
+  // renderGame();
 }
 
 let end = ['End the game in three', 'two', 'one'];
