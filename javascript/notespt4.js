@@ -78,3 +78,5 @@ let castle = {
 console.log(castle.title);
 console.log(castle.pictures);
 console.log(castle['pictures']);
+
+// A function inside of an object is called a method

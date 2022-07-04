@@ -3,7 +3,14 @@
 let player = {
   name: 'Nelly',
   chips: 280,
+  // this is a method because its a function inside an object!
+  sayHello: function () {
+    console.log('Heisann!');
+  },
 };
+// console is an object and .log is a method
+console.log();
+player.sayHello();
 let firstCard = getRandomCard();
 let secondCard = getRandomCard();
 // THIS IS AN ARRAY - ORDERED LIST OF ITEMS
