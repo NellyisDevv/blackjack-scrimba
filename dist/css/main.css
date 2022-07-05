@@ -16,21 +16,38 @@
 }
 
 body {
-  background-image: url("../img/brown.jpg");
+  background-image: url("https://images.unsplash.com/photo-1616272963049-da2d8efc0c57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
 
+@-webkit-keyframes main {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes main {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .section-one {
-  margin-top: 250px;
+  margin-top: 380px;
 }
 .section-one .card-container {
   max-width: 380px;
   height: 600px;
   margin: auto;
-  background-image: url("../img/blackjack.png");
+  background-image: url("https://images.unsplash.com/photo-1628965882741-570e75becd5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,6 +56,8 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 30px;
+  -webkit-animation: main 1.5s ease;
+          animation: main 1.5s ease;
 }
 .section-one .card-container h1 {
   font-size: 4.2rem;
