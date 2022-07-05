@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url("./img/brown.jpg");
+  background-image: url("../img/brown.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,7 +30,7 @@ body {
   max-width: 380px;
   height: 600px;
   margin: auto;
-  background-image: url("./img/blackjack.png");
+  background-image: url("../img/blackjack.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
